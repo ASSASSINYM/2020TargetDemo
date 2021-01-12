@@ -16,6 +16,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSString *str = @"";
+#if ENVIROMENT_TYPE == 0
+    str = @"debug";
+#elif ENVIROMENT_TYPE == 1
+    str = @"predebug";
+#elif ENVIROMENT_TYPE == 2
+    str = @"release";
+#endif
+    
+    NSLog(@"%@",str);
 }
 
 
